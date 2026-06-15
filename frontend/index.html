@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Steganography</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2>🔐 Steganography</h2>
+  <div class="nav-btns">
+    <button onclick="showEncode()">Encode</button>
+    <button onclick="showDecode()">Decode</button>
+  </div>
+</nav>
+
+<!-- MAIN SECTION -->
+<section class="hero">
+  <h1>Secure Your Messages Inside Images</h1>
+  <p>Encode and decode secret messages </p>
+</section>
+
+<!-- APP SECTION -->
+<div class="main">
+
+  <!-- ENCODE -->
+  <div id="encodeSection" class="card">
+    <h3>Encode Message</h3>
+
+    <input type="file" id="encodeImage">
+    <input type="text" id="message" placeholder="Enter secret message">
+    <input type="email" id="receiverEmail" placeholder="Receiver Email">
+
+    <button class="btn-primary" onclick="encode()">Encode & Save</button>
+  </div>
+
+  <!-- DECODE -->
+  <div id="decodeSection" class="card hidden">
+    <h3>Decode Message</h3>
+
+    <input type="file" id="decodeImage">
+    <input type="email" id="decodeEmail" placeholder="Enter Email">
+
+    <button class="btn-secondary" onclick="sendOTP()">Send OTP</button>
+
+    <input type="text" id="otp" placeholder="Enter OTP">
+
+    <button class="btn-primary" onclick="decode()">Decode Message</button>
+
+    <p id="result"></p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Steganography System </p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
